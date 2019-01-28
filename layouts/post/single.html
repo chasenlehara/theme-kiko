@@ -1,0 +1,18 @@
+{{ define "main" }}
+<header class="masthead">
+  <h1 class="masthead-title--small">
+    <a href="/">{{ .Site.Title }}</a>
+  </h1>
+</header>
+<div class="content post h-entry">
+	{{ if .Title }}
+		<h1 class="page-title">{{ .Title }}</h1>
+	{{ end }}
+  <div class="post-date">
+    <time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </div>
+  <div class="e-content">
+  {{ .Content }}
+  </div>
+</div>
+{{ end }}
