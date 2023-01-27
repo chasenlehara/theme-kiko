@@ -19,7 +19,12 @@
 {{ end }}
 
 </div>
-
-{{ partial "pagination.html" . }}
+{{ if .IsHome }}
+	{{ if .Site.Params.paginate_home }}
+		{{ partial "pagination" . }}
+	{{ end }}
+{{ else if .Site.Params.paginate_categories }}
+	{{ partial "pagination" . }}
+{{ end }}
 
 {{ end }}
