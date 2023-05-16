@@ -6,10 +6,10 @@
 </header>
 <div class="content post h-entry">
 	{{ if .Title }}
-		<h1 class="page-title">{{ .Title }}</h1>
+		<h1 class="page-title p-name">{{ .Title }}</h1>
 	{{ end }}
   <div class="post-date">
-    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    <a href="{{ .Permalink }}" class="u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></a>
   </div>
   <div class="e-content">
   {{ .Content }}
